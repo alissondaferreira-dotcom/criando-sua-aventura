@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aventura na Ilha Perdida</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="tela-capa" id="telaCapa">
+    <h1>Aventura na Ilha Perdida 🏝️</h1>
+    <p>Você está pronto para o desconhecido?</p>
+    <button onclick="iniciarJogo()">Iniciar</button>
+  </div>
+
+  <div class="jogo" id="telaJogo" style="display: none;">
+    <!-- Aqui começa sua aventura (você pode adaptar com sua lógica atual) -->
+    <h2>Capítulo 1: O Despertar</h2>
+    <p>Você acorda em uma praia desconhecida com o som das ondas ao fundo...</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e0f7fa;
+  color: #004d40;
+  text-align: center;
+}
+
+.tela-capa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to top, #a7ffeb, #1de9b6);
+}
+
+.tela-capa h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.tela-capa p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.tela-capa button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #00695c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tela-capa button:hover {
+  background-color: #004d40;
+}
+
+.jogo {
+  padding: 40px;
+}
+
+function iniciarJogo() {
+  // Esconde a tela de capa
+  document.getElementById("telaCapa").style.display = "none";
+  // Mostra o conteúdo do jogo
+  document.getElementById("telaJogo").style.display = "block";
+}
